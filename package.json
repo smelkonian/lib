@@ -28,8 +28,5 @@
     "styled-components": "^5.3.9",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
-  },
-  "peerDependencies": {
-    "styled-components": ">=5"
   }
 }
