@@ -1,5 +1,8 @@
 {
-  "name": "lib",
+  "name": "@smelkonian/lib",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/smelkonian"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
