@@ -1,0 +1,31 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "keywords": [],
+  "author": "Sarkis Melkonian",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/styled-components": "^5.1.26",
+    "rollup": "^3.20.2",
+    "rollup-plugin-dts": "^5.3.0",
+    "styled-components": "^5.3.9",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "styled-components": ">=5"
+  }
+}
