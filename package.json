@@ -12,8 +12,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c",
-    "publish": "npm version patch --force && npm publish"
+    "rollup": "rollup -c"
   },
   "keywords": [],
   "author": "Sarkis Melkonian",
