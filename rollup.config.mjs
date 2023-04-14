@@ -1,3 +1,4 @@
+import { babel } from "@rollup/plugin-babel";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -20,7 +21,16 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" })],
+    plugins: [
+      peerDepsExternal(),
+      resolve(),
+      commonjs(),
+      babel({
+        plugins: ["babel-plugin-styled-components"],
+        exclude: "node_modules/**",
+      }),
+      typescript({ tsconfig: "./tsconfig.json" }),
+    ],
   },
   {
     input: "dist/esm/types/index.d.ts",
