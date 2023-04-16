@@ -2,9 +2,11 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import filesize from "rollup-plugin-filesize";
-import { readFile } from "fs/promises";
+// import { readFile } from "fs/promises";
+import { babel } from "@rollup/plugin-babel";
+import json from "./package.json";
 
-const json = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
+// const json = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
 
 export default [
   {
@@ -16,7 +18,12 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [peerDepsExternal(), typescript({ tsconfig: "./tsconfig.json" }), filesize()],
+    plugins: [
+      peerDepsExternal(),
+      typescript({ tsconfig: "./tsconfig.json" }),
+      babel({ babelHelpers: "runtime", plugins: ["@babel/plugin-transform-runtime"] }),
+      filesize(),
+    ],
   },
   {
     input: "dist/esm/types/index.d.ts",
