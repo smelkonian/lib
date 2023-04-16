@@ -4,7 +4,7 @@ import { theme } from "../../theme";
 import { Size, Variant } from "../../ts/type";
 import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: Variant;
   size: Size;
 }

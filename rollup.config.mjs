@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import filesize from "rollup-plugin-filesize";
 import { readFile } from "fs/promises";
 
 const json = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
@@ -22,7 +23,7 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" })],
+    plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" }), filesize()],
   },
   {
     input: "dist/esm/types/index.d.ts",
