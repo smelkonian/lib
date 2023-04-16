@@ -4,19 +4,21 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-import packageJson from "./package.json" assert { type: "json" };
+import { readFile } from "fs/promises";
+
+const json = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        file: json.main,
         format: "cjs",
         sourcemap: true,
       },
       {
-        file: packageJson.module,
+        file: json.module,
         format: "esm",
         sourcemap: true,
       },
@@ -26,6 +28,7 @@ export default [
       resolve(),
       commonjs(),
       babel({
+        babelHelpers: "bundled",
         plugins: ["babel-plugin-styled-components"],
         exclude: "node_modules/**",
       }),
