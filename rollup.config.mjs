@@ -1,6 +1,4 @@
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import filesize from "rollup-plugin-filesize";
@@ -18,7 +16,7 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" }), filesize()],
+    plugins: [peerDepsExternal(), typescript({ tsconfig: "./tsconfig.json" }), filesize()],
   },
   {
     input: "dist/esm/types/index.d.ts",
