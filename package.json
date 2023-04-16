@@ -11,7 +11,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf && rimraf dist",
+    "prebuild": "rimraf dist",
     "rollup": "rollup -c",
     "build": "npm run rollup",
     "start": "rollup -c -w"
