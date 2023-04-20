@@ -6,7 +6,7 @@ export type ThemeProps = {
   theme: typeof theme;
 };
 
-const GlobalStyles = createGlobalStyle<ThemeProps>`
+export const GlobalStyles = createGlobalStyle<ThemeProps>`
 * {
 	margin: 0;
 	padding: 0;
