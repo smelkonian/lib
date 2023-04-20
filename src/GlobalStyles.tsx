@@ -6,11 +6,11 @@ export type ThemeProps = {
   theme: typeof theme;
 };
 
-export const GlobalStyle = createGlobalStyle<ThemeProps>`
+const GlobalStyles = createGlobalStyle<ThemeProps>`
 * {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -29,4 +29,4 @@ body {
 }
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;

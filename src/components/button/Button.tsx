@@ -4,10 +4,10 @@ import { theme } from "../../theme";
 import { Size, Variant } from "../../ts/type";
 import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant: Variant;
   size: Size;
-}
+};
 
 export const Button = styled.button`
   border-radius: 0.6rem;
