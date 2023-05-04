@@ -11,5 +11,5 @@ export type Variant =
   | "success-secondary"
   | "negative"
   | "negative-secondary"
-  | "login"
+  | "signin"
   | "signup";
