@@ -20,7 +20,16 @@ export default [
     plugins: [
       peerDepsExternal(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      babel({ babelHelpers: "runtime", plugins: ["@babel/plugin-transform-runtime"] }),
+      babel({
+        babelHelpers: "runtime",
+        plugins: [
+          "babel-plugin-styled-components",
+          {
+            pure: true,
+          },
+          "@babel/plugin-transform-runtime",
+        ],
+      }),
       filesize(),
     ],
   },
