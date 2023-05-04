@@ -23,10 +23,12 @@ export default [
       babel({
         babelHelpers: "runtime",
         plugins: [
-          "babel-plugin-styled-components",
-          {
-            pure: true,
-          },
+          [
+            "babel-plugin-styled-components",
+            {
+              pure: true,
+            },
+          ],
           "@babel/plugin-transform-runtime",
         ],
       }),
