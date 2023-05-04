@@ -40,7 +40,7 @@ export const Button = styled.button`
     (props.variant === "success-secondary" && "none") ||
     (props.variant === "negative" && "none") ||
     (props.variant === "negative-secondary" && "none") ||
-    (props.variant === "login" && "none") ||
+    (props.variant === "signin" && "none") ||
     (props.variant === "signup" && "none")};
 
   background-color: ${(props: ButtonProps) =>
@@ -52,7 +52,7 @@ export const Button = styled.button`
     (props.variant === "success-secondary" && "transparent") ||
     (props.variant === "negative" && theme.colors.red[400]) ||
     (props.variant === "negative-secondary" && "transparent") ||
-    (props.variant === "login" && theme.colors.purple[500]) ||
+    (props.variant === "signin" && theme.colors.purple[500]) ||
     (props.variant === "signup" && theme.colors.purple[500])};
 
   color: ${(props: ButtonProps) =>
@@ -64,7 +64,7 @@ export const Button = styled.button`
     (props.variant === "success-secondary" && theme.colors.green[400]) ||
     (props.variant === "negative" && theme.colors.greyScale[800]) ||
     (props.variant === "negative-secondary" && theme.colors.red[400]) ||
-    (props.variant === "login" && theme.colors.greyScale[50]) ||
+    (props.variant === "signin" && theme.colors.greyScale[50]) ||
     (props.variant === "signup" && theme.colors.greyScale[50])};
 
   &:hover {
@@ -76,7 +76,7 @@ export const Button = styled.button`
       (props.variant === "success-secondary" && "#4ed17e1a") ||
       (props.variant === "negative" && theme.colors.red[200]) ||
       (props.variant === "negative-secondary" && "#fe7d7d1a") ||
-      (props.variant === "login" && theme.colors.purple[700]) ||
+      (props.variant === "signin" && theme.colors.purple[700]) ||
       (props.variant === "signup" && theme.colors.purple[700])};
 
     color: ${(props: ButtonProps) =>
@@ -97,7 +97,7 @@ export const Button = styled.button`
       (props.variant === "success-secondary" && theme.colors.green[100]) ||
       (props.variant === "negative" && theme.colors.red[100]) ||
       (props.variant === "negative-secondary" && theme.colors.red[100]) ||
-      (props.variant === "login" && "transparent") ||
+      (props.variant === "signin" && "transparent") ||
       (props.variant === "signup" && "transparent")};
   }
 `;
